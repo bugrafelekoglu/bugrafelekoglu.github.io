@@ -13,8 +13,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-<body>
 
+<body>
 <!--Main menu-->
   <div class="menu">
     <div class="container">
@@ -70,7 +70,7 @@
           <div class="personal-profile__contacts">
             <dl class="contact-list contact-list__opacity-titles">
               <dt>Age:</dt>
-              <dd>24</dd>
+              <dd><p id="age"></p></dd>
               <dt>Phone:</dt>
               <dd><a href="tel:+905383523202">+90-(538)-352-32-02</a></dd>
               <dt>Email:</dt>
@@ -94,6 +94,13 @@
   </header>
 <!--Header-->
 
+<script>
+  var today = new Date();
+  var birth = new Date(1995,03,29,0,0,0);
+  var difference = (today-birth)/(1000*60*60*24*365);
+  document.getElementById('age').innerHTML = difference.toFixed(0);
+</script>
+
 <!--Hello-->
   <section id="hello" class="container section">
     <div class="row">
@@ -101,12 +108,11 @@
         <h2 id="hello_header" class="section__title">Hi_</h2>
         <p class="section__description">
           Hello, I'm a software engineer who is interested in UX/UI Design. 
-          I love creative stuff, so I believe Graphic Design and UX/UI Design will be in my life along with programming.
-          For me, designing is much delightful than coding but I assume I should choose one of them. 
+          I love creative stuff, so I believe graphical things will be in my career along with programming.
           <br>
           <br>
-          Here some information about me: I was born in Izmir in March 1995. <i>[You should visit Izmir if you haven't]</i>
-          I graduated from Bilkent University at January 2019. I've been living in Ankara for six years and I think I'll be here for a while. 
+          Here some information about myself: I was born in Izmir in March 1995. <i>[You should visit Izmir if you haven't]</i>
+          I graduated from Bilkent University (Computer Science BSc) at January 2019. I've been living in Ankara for six years and I think I'll be here for a while. 
           Playing video games such as Hearts of Iron IV, Civilization or Cities Skylines relaxes me. <i>[If you're playing too, you can add me on steam.]</i>
           I adore listening to music. Music helps me to experience my feelings intensely. You can follow my most popular spotify lists below.
         </p>
@@ -158,6 +164,15 @@
       <div class="col-md-8 section__resume dark-resume-list">
         <h3 class="dark-resume-list_title">employment</h3>
         <div class="dark-resume-list__block">
+          <p><a class="dark-resume-list__block-title" href="http://www.biste.co/" target="_blank" style="text-decoration: none;">Biste Design</a></p>
+          <p class="dark-resume-list__block-date">Frontend Dev (also kinda Co-founder) - 2019</p>
+          <p>
+              Biste is a design startup that gathers original designs and gives commission to designers of selling designs. 
+              The selling items are various items such as printed T-Shirts, posters or stickers. 
+              To establish our MVP, we bought a Wordpress template and I edited it by using CSS and some plugins to suit our requirements.
+          </p>
+        </div>
+        <div class="dark-resume-list__block">
           <p><a class="dark-resume-list__block-title" href="http://www.veripark.com.tr/" target="_blank" style="text-decoration: none;">Veripark</a></p>
           <p class="dark-resume-list__block-date">Intern - 2017</p>
           <p>
@@ -182,30 +197,20 @@
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Java</span>
-            <span class="progress-list__skill-value">80%</span>
+            <span class="progress-list__skill-value">45%</span>
           </p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
+            <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" >
             </div>
           </div>
         </div>
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">JavaScript</span>
-            <span class="progress-list__skill-value">50%</span>
+            <span class="progress-list__skill-value">15%</span>
           </p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-        <div class="progress-list__skill">
-          <p>
-            <span class="progress-list__skill-title">React Native</span>
-            <span class="progress-list__skill-value">60%</span>
-          </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
         </div>
@@ -219,41 +224,51 @@
             </div>
           </div>
         </div>
+        <div class="progress-list__skill">
+          <p>
+            <span class="progress-list__skill-title">React Native</span>
+            <span class="progress-list__skill-value">25%</span>
+          </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-5 mr-auto">
         <div class="progress-list__skill">
             <p>
-              <span class="progress-list__skill-title">C++</span>
-              <span class="progress-list__skill-value">30%</span>
+              <span class="progress-list__skill-title">Flutter</span>
+              <span class="progress-list__skill-value">10%</span>
             </p>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
               </div>
             </div>
           </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">bootstrap </span>
-            <span class="progress-list__skill-value">30%</span>
+            <span class="progress-list__skill-title">Angular </span>
+            <span class="progress-list__skill-value">15%</span>
           </p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
         </div>
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Adobe Photoshop</span>
-            <span class="progress-list__skill-value">60%</span>
+            <span class="progress-list__skill-value">35%</span>
           </p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">adobe illustrator</span>
+            <span class="progress-list__skill-title">Adobe illustrator</span>
             <span class="progress-list__skill-value">20%</span>
           </p>
           <div class="progress">
@@ -273,7 +288,7 @@
   <section id="portfolio" class="container section">
     <div class="row">
       <div class="col-md-12">
-        <h2 id="portfolio_header" class="section__title">My projects_</h2>
+        <h2 id="portfolio_header" class="section__title">Course projects_</h2>
       </div>
     </div>
     <div class="row portfolio-menu">
@@ -428,6 +443,8 @@
   <script src="assets/js/mobile-menu.js"></script>
   <script src="assets/js/mbclicker.min.js"></script>
   <script src="assets/js/site-btn.js"></script>
+
+  
 </body>
 
 </html>
